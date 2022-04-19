@@ -1,0 +1,11 @@
+.img-thumbline{
+    height: auto;
+    object-fit: cover;
+}
+.view-img{
+    height: 90vh;
+}
+.images-style{
+    max-width: 100%;
+    max-height: 100%;
+}

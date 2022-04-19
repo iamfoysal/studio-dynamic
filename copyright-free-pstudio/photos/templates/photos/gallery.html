@@ -1,0 +1,35 @@
+{% extends "photos/base.html" %}
+
+{% block content%}
+<body class="m-5">
+    <div class="container">
+        <div class="row body-margin ">
+            <div class="col-md-12">
+                <div class="row">
+                    {% for photo in photos %}
+                    <div class="col-md-3 image-head">
+                        <div class="card my-2 ">
+                            <div class="contents">
+                                <img class="card-img-top img-thumbline " src="{{ photo.image.url }}"
+                                    alt="Card image cap">
+                                <div class="overlay">
+                                    <div class="text">
+                                        <a class="btn btn-outline-dark btn-sm" href="{% url 'photo' photo.id %}">View
+                                            Full Size</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <!-- <p>title: {{ photo.category.title }}} </p> -->
+                                <small>Category : {{ photo.category.name }}</small>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <h3 class="text-center">There are no pictures in this category...!</h3>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% endblock content%}

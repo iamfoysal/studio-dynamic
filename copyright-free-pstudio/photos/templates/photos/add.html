@@ -1,0 +1,53 @@
+{% extends "photos/base.html" %}
+
+{% block content%}
+<body class="m-5">
+
+    <div class="container body-margin">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+
+                <div class="card">
+                    <form method="POST" action="" enctype="multipart/form-data">
+
+                        {% csrf_token%}
+
+                        <h3 class="pt-3 text-center">Post a new image</h3>
+                        <div class="form-group m-3">
+                            <label>Image Discription</label>
+                            <textarea type="text" name="description"
+                                class="form-control"></textarea>
+                        </div>
+                        <div class="form-group m-3">
+                            <label>Category</label>
+                            <select name="category"  class="form-control" id="">
+                                <option value="none"> select category</option>
+
+                                {% for category in categories %}
+                                <option value="{{category.id}}">{{category.name}}</option>
+
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group m-3">
+                            <label>Create others Category</label>
+                            <input type="text" name="category_new" placeholder="create others category"
+                                class="form-control">
+                        </div>
+
+                        <div class="form-group m-3">
+                            <label>Upload Image</label>
+                            <input type="file" name="image" class="form-control-file">
+                        </div>
+                        <a class="btn btn-dark my-3 m-3" href="{% url 'gallery' %}">Back</a>
+                        <button class="btn btn-outline-secondary float-right m-3" type="submit"
+                            name="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+{% endblock content%}

@@ -1,0 +1,33 @@
+{% extends 'photos/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="global-container sign-up-custom mt-5 pt-4">
+        <div class="card login-form form-width">
+        <div class="card-body">
+            <h3 class="card-title text-center">Shopy user Signup </h3>
+            <div class="card-text">
+                
+                <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div>  -->
+                <form method= "POST" class="singin-up-form">
+                    {% csrf_token %}
+
+                    {% for field in form %}
+                    <div class="form-group p-2">
+                        <label >{{ field.label_tag }} </label>
+                        {{ field }}
+                    </div> 
+                    <div>
+                        {{ field.errors }}
+                    </div>
+                    {% endfor %}
+                    <button type="submit" class="singin-up-form-btn btn btn-primary btn-block">Submit</button>
+                    <div class="sign-up">Already have an account? <a href="{% url 'signin' %}">login</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
