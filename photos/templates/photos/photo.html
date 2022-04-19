@@ -1,0 +1,23 @@
+{% extends "photos/base.html" %}
+
+{% block content%}
+
+    <div class="container body-margin">
+        <div class="row justify-content-center">
+            <div class="col">
+                <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Back</a>
+                <div class="view-img text-center">
+                    <img class="images-style rounded"  style="max-width: 100%;
+                    max-height: 100%; " src="{{photo.image.url}}" alt="">
+
+                    <div class="container mb-5">
+                        <p>title: {{ photo.title }} </p>
+                        <small>Category : {{ photo.name }}</small>
+                        <p class=" ">{{photo.description}}</p>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock content%}
