@@ -18,9 +18,10 @@ virtualenv is used to manage Python packages for different projects. Using virtu
     source env/bin/activate
 ##### windows 
     .\env\Scripts\activate 
+####  install requirements.txt
 ##### Unix/macOS
     python3 -m pip install -r requirements.txt 
-####  install requirements.txt
+##### windows 
     pip install -r requirements.txt 
 ####  Run server
     py manage.py runserver 
