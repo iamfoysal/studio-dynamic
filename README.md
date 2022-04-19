@@ -1,12 +1,9 @@
 ### copyright-free-pstudio
 ****
 Choose from a curated selection of non **copyrighted photos** . Every image can be used for free for both commercial and personal uses.
-
 ## You can clone this project. Follow the steps below to get output.
-
 #### Installing virtualenv
 virtualenv is used to manage Python packages for different projects. Using virtualenv allows you to avoid installing Python packages globally which could break system tools or other projects. You can install virtualenv using pip.
-
 ##### Unix/macOS
     python3 -m pip install --user virtualenv    
 ##### windows 
@@ -21,20 +18,14 @@ virtualenv is used to manage Python packages for different projects. Using virtu
     source env/bin/activate
 ##### windows 
     .\env\Scripts\activate 
- 
 ##### Unix/macOS
     python3 -m pip install -r requirements.txt 
 ####  install requirements.txt
     pip install -r requirements.txt 
-
 ####  Run server
     py manage.py runserver 
-
-
 #### localhost: 
-    http://127.0.0.1:8000/
-    
-    
+    http://127.0.0.1:8000/   
 You need to login to enjoy the whole project. You will get full access using your user ID and password.
 -----------------------
 ##### userid: 
