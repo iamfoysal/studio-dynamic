@@ -14,7 +14,7 @@
 
 <body>
     <!-- Navbar  -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top mb-5 nav-custom">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm  fixed-top mb-5 nav-custom">
         <div class="container"> <a class="navbar-brand d-flex align-items-center" href="{% url 'gallery'%}">
                 <span class="ml-3 font-weight-bold">Photo-Studio</apan>
             </a><button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
@@ -23,6 +23,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar4">
                 <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
+                    <li class="nav-item px-lg-2">
+                        <form class=" mr-5 my-2 my-lg-0 d-flex" action="" method="POST">
+                            {% csrf_token %}
+                            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                          </form>
+                    </li>
 
                     <li class="nav-item px-lg-2"><a href="{% url 'add'%}"
                             class="  btn btn-block text-secondary btn btn-sm m-1">Post new Photo</a></li>
@@ -41,9 +48,12 @@
                             {% endfor %}
                         </div>
                     </div>
+                    
                     <li class="nav-item px-lg-2"> <a class="nav-link" href="#">About</a></li>
 
                     <li class="nav-item px-lg-2"> <a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item px-lg-2 active"> <a class="nav-link" href="{% url 'gallery' %}">Home</a>
+                    </li>
 
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
@@ -52,11 +62,10 @@
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'signin' %}"><i class=" fas fa-duotone fa-user"></i>
-                            Signin/Signup</a>
+                            Signin</a>
                     </li>
                     {% endif %}
-                    <li class="nav-item px-lg-2 active"> <a class="nav-link" href="{% url 'gallery' %}">Home</a>
-                    </li>
+                    
                 </ul>
             </div>
 
@@ -68,10 +77,10 @@
     <!-- env navbar -->
 
     <!-- Footer -->
-    <footer class="bg-white mt-5">
+    <footer class="footer-custom  mt-5">
         <div class="container py-5">
             <div class="row py-4">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="/static/images/logo/footer-logo.png" alt="" width="180" class="">
                     <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt. consectetur adipisicing elit. At itaque temporibus.consectetur
                         adipisicing elit. At itaque temporibus.</p>
@@ -130,7 +139,7 @@
         </div>
 
         <!-- Copyrights -->
-        <div class="bg-light">
+        <div class="mb-5">
             <div class="container text-center">
                 <p>&copy; {% now "Y" %} Photo-Studio, Inc. All rights reserved.</p>
             </div>

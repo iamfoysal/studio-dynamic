@@ -6,28 +6,28 @@
         <div class="row body-margin ">
             <div class="col-md-12">
                 <div class="row">
-                    {% for photo in photos %}
+                    {% for result in results %}
                     <div class="col-md-3 image-head">
                         <div class="card my-2 ">
                             <div class="contents">
-                                <img class="card-img-top img-thumbline " src="{{ photo.image.url }}"
+                                <img class="card-img-top img-thumbline " src="{{ result.image.url }}"
                                     alt="Card image cap">
                                 <div class="overlay">
                                     <div class="text">
-                                        <a class="btn btn-outline-dark btn-sm" href="{% url 'photo' photo.id %}">View
+                                        <a class="btn btn-outline-dark btn-sm" href="{% url 'photo' result.id %}">View
                                             Full Size</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <p>title: {{ photo.title }} </p>
-                                <small>Cat: {{ photo.category.name }}</small><br>
-                                <small>Published :{{ photo.posted_at }}</small>
+                                <p>title: {{ result.title }} </p>
+                                <small>Cat: {{ result.category.name }}</small><br>
+                                <small>Published :{{ result.posted_at }}</small>
                             </div>
                         </div>
                     </div>
                     {% empty %}
-                    <h3 class="text-center">There are no pictures in this category...!</h3>
+                    <h3 class=" container text-center ">Sorry! Your search result Not Found!</h3>
                     {% endfor %}
                 </div>
             </div>

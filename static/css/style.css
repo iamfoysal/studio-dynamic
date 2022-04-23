@@ -1,10 +1,11 @@
 /* home page */
 body{
-    background-color: rgb(247, 239, 239);
+    background-color: rgba(85, 141, 173, 0.808);
 }
 /* nav bar */
 .nav-custom{
     border-bottom: 1px solid #dfe3e7f3;
+    background-color: #e8ecf0f3;
 }
 /* navbar end  */
 .body-margin{
@@ -84,7 +85,13 @@ body{
 .form-width{
     width:35%;
 }
-
+/* * footer */ 
+.footer-custom{
+  background-color: #404549f3;
+  width: 100%;
+  border-radius: 5px;
+  color: #dce1e6f3;
+}
 /* message */
 
 .message {
@@ -93,14 +100,14 @@ body{
     bottom: 2rem;
     padding: 0.4rem 1rem;
     border-radius: 0.4rem;
-    color: #222;
+    color: rgba(40, 41, 48, 0.753);
     transition: all .2s;
     transform: translate(0);
     animation: autoHide 0s ease-in 4s forwards;
   }
   
   .message-success {
-    background: #222;
+    background: rgb(5, 114, 238);
     color: #fff;
     animation: autoHide 0s ease-in 4s forwards;
   }

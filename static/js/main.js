@@ -4,7 +4,7 @@ const message = document.querySelector('.message');
 if (message) {
    setTimeout(() => {
      message.classList.add("message-hide");
-   }, 2000);
+   }, 5000);
 }
 
 

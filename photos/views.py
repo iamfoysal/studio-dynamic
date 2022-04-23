@@ -1,5 +1,7 @@
+
 from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse
+from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .models import Category, Photo
 
@@ -11,6 +13,14 @@ def gallery(request):
     else:
          photos = Photo.objects.filter(category__name = category) 
     categories= Category.objects.all() 
+
+    # Search sction
+    if request.method == 'POST':
+        search = request.POST.get('search')
+        results = Photo.objects.filter(Q(title__icontains=search))
+        context =  { 'results': results, 'search': search}
+        return render(request, 'photos/search.html', context)
+    # search end 
     context = {'categories': categories, 'photos': photos}
     return render(request, 'photos/gallery.html', context)
 
@@ -35,6 +45,7 @@ def addPhoto(request):
             category = None  
         
         photo = Photo.objects.create(
+            title = data ['title'],
             category= category, 
             description = data ['description'],
             image=image
