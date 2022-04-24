@@ -1,3 +1,4 @@
+// message section
 const message = document.querySelector('.message');
 
 
@@ -8,6 +9,8 @@ if (message) {
 }
 
 
+// nav section 
+
 $(document).ready(function () {
     if ($(window).width() > 991){
     $('.navbar-light .d-menu').hover(function () {
@@ -17,3 +20,22 @@ $(document).ready(function () {
         });
         }
     });
+
+
+// card dection 
+// $(document).ready(function() {
+//    console.log("document is ready");
+     
+   
+//      $( ".card" ).hover(
+//      function() {
+//        $(this).addClass('shadow-lg').css('cursor', 'pointer'); 
+//      }, function() {
+//        $(this).removeClass('shadow-lg');
+//      }
+//    );
+     
+//    // document ready  
+//    });
+   
+   
