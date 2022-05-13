@@ -2,6 +2,7 @@
 ****
 Choose from a curated selection of non **copyrighted photos** . Every image can be used for free for both commercial and personal uses.
 ## You can clone this project. Follow the steps below to get output.
+### First clone  this file.then follow next step
 #### Installing virtualenv
 virtualenv is used to manage Python packages for different projects. Using virtualenv allows you to avoid installing Python packages globally which could break system tools or other projects. You can install virtualenv using pip.
 ##### Unix/macOS
