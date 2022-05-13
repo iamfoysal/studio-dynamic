@@ -1,11 +1,13 @@
 /* home page */
 body{
-    background-color: rgba(85, 141, 173, 0.808);
+    background-color: rgba(235, 237, 238, 0.808);
 }
 /* nav bar */
 .nav-custom{
-    border-bottom: 1px solid #dfe3e7f3;
-    background-color: #e8ecf0f3;
+    border-bottom: 1px solid #fdfdfdf3;
+    background-color: #d0d3d6f3;
+    position: fixed;
+    
 }
 /* navbar end  */
 .body-margin{
@@ -87,10 +89,10 @@ body{
 }
 /* * footer */
 .footer-custom{
-  background-color: #404549f3;
+  background-color: #e4eaeef3;
   width: 100%;
   border-radius: 5px;
-  color: #dce1e6f3;
+  color: #131414f3;
 }
 /* message */
 
@@ -98,6 +100,8 @@ body{
     position: fixed;
     right: 2rem;
     bottom: 2rem;
+    z-index: 1;
+    list-style: none;
     padding: 0.4rem 1rem;
     border-radius: 0.4rem;
     color: rgba(40, 41, 48, 0.753);
@@ -107,7 +111,7 @@ body{
   }
 
   .message-success {
-    background: rgb(5, 114, 238);
+    background: rgb(75, 127, 187);
     color: #fff;
     animation: autoHide 0s ease-in 4s forwards;
   }
