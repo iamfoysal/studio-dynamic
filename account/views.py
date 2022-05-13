@@ -50,7 +50,7 @@ def signup(request):
 @login_required(login_url='signin')
 def signout(request):
     logout(request)
-    # messages.success(request, "logout successfully Complete.")
+    messages.success(request, "logout successfully Complete.")
     return redirect("gallery")
 
 

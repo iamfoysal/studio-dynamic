@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .models import Category, Photo
+from django.contrib import messages
 
 
 def gallery(request):
@@ -50,6 +51,7 @@ def addPhoto(request):
             description = data ['description'],
             image=image
         )
+        messages.success(request, "Congratulations! Post Complete.")
         return redirect('gallery')
     context = {'categories': categories}
     return render(request, 'photos/add.html', context)
