@@ -2,23 +2,97 @@
 
 {% block content %}
 
-<div class="global-container sign-up-custom mt-5 pt-4">
+
+
+
+<div class="container register mb-5">
+    <div class="row">
+        <div class="col-md-3 register-left "class="text-white">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+            <h3 class="text-white">Welcome</h3>
+            <p class="text-white">to your Photo Studio !</p>
+        </div>
+        <div class="col-md-9 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab"
+                        aria-controls="login" aria-selected="true">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="newuser-tab" data-toggle="tab" href="#newuser" role="tab"
+                        aria-controls="newuser" aria-selected="false">New User</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <h3 class="register-heading">Login</h3>
+                    <div class="row register-form">
+                        <div class="col-md-12 profile_card">
+                            <form class="form-inline" method="POST">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <!-- <i class="fa fa-envelope-o"></i> -->
+                                    <input type="text" class="form-control " name="username" placeholder="Email" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <!-- <i class="fa fa-lock"></i> -->
+                                    <input type="password" name="password" class="form-control" placeholder="Password *" value="" />
+                                </div>
+                                <div class="float-right">
+                                    <input type="submit" class="btn btn-primary" value="Login" />
+                                </div>
+                                <div class="sign-up">Don't have an account? <a href="{% url 'signup' %}">Create Account</a></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- registar  -->
+                <div class="tab-pane fade show" id="newuser" role="tabpanel" aria-labelledby="newuser-tab">
+                    <h3 class="register-heading">New User</h3>
+                    <div class="row register-form">
+                        <!-- <form method= "POST" class="form-inline">
+                                {% csrf_token %}
+            
+                                {% for field in form %}
+                                <div class="form-group p-2">
+                                    <label >{{ field.label_tag }} </label>
+                                    {{ field }}
+                                </div> 
+                                <div>
+                                    {{ field.errors }}
+                                </div>
+                                {% endfor %}
+                                <div class="float-right">
+                                    <input type="submit" class="btn btn-primary d-block" value="Register" />
+                                </div> 
+                            </form> -->  
+                            <div class="float-right py-5 ml-5">
+                                <a href="{% url 'signup' %}">Create Account</a>
+                            </div>  
+                          
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container global-container sign-up-custom mt-5 pt-4">
     <div class="card login-form form-width">
         <div class="card-body">
-            <h3 class="card-title text-center">Shopy user Login </h3>
+            <h3 class="card-title text-center">Login</h3>
             <div class="card-text">
-
-                <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div>  -->
                 <form method="POST" class="singin-up-form">
                     {% csrf_token %}
                     <div class="form-group p-2">
                         <label for="exampleInputEmail1">Username</label>
-                        <input type="text" name ="username" class="form-control form-control-sm">
+                        <input type="text" name="username" class="form-control form-control-sm">
                     </div>
                     <div class="form-group p-2">
                         <label for="exampleInputPassword1">Password</label>
                         <a class="forgot-password" href="#">Forgot password?</a>
-                        <input type="password"  name ="password" class="form-control form-control-sm" id="exampleInputPassword1">
+                        <input type="password" name="password" class="form-control form-control-sm"
+                            id="exampleInputPassword1">
                     </div>
                     <button type="submit" class="singin-up-form-btn btn btn-primary btn-block">Sign in</button>
                     <div class="sign-up">Don't have an account? <a href="{% url 'signup' %}">Create Account</a></div>
@@ -26,5 +100,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 {% endblock %}

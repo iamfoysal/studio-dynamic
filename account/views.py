@@ -44,7 +44,7 @@ def signup(request):
             # send_mail( subject, message, email_from, recipient_list )
             # return redirect("signin")
         
-    return render(request, 'account/signup.html',{'form':form} )
+    return render(request, 'account/signup.html', {'form':form} )
 
 
 @login_required(login_url='signin')
