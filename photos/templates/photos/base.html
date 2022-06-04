@@ -31,7 +31,15 @@
         </div>
         <ul class="main-menu">
             <li><a href="{% url 'gallery'%}">Home</a></li>
-            <li><a href="#">About the Artist </a></li>
+            <li>
+                <a href="#">Gallery</a>
+                <ul class="sub-menu">
+                    <li><a href="{% url 'portfolio'%}">Album 2021</a></li>
+                    <li><a href="{% url 'portfolio_one'%}">Album 2022</a></li>
+                </ul>
+            </li>
+            
+            <!-- <li><a href="#">About the Artist </a></li> -->
             <li>
                 <a href="#">Catagoty</a>
                 <ul class="sub-menu">
@@ -54,9 +62,9 @@
                     <li><a href="">Portfolio 3</a></li> -->
                 </ul>
             </li>
-            <li><a href="#">Blog</a></li>
+            <!-- <li><a href="#">Blog</a></li>
             <li><a href="#">Elements</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Contact</a></li> -->
             <li class="search-mobile">
                 <button class="search-btn"><i class="fa fa-search"></i></button>
             </li>

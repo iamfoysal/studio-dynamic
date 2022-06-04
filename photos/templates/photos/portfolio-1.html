@@ -1,0 +1,89 @@
+{% extends 'photos/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+	<!-- Portfolio section  -->
+	<div class="portfolio-2-section">
+		<ul class="portfolio-filter pf-2 controls">
+			<li class="control" data-filter="all">All</li>
+			<li class="control" data-filter=".nature">Nature</li>
+			<li class="control" data-filter=".studio">Studio Photography</li>
+			<li class="control" data-filter=".weddings">Weddings</li>
+			<li class="control" data-filter=".lifestyle">Lifestyle</li>
+			<li class="control" data-filter=".fashion">Fashion</li>
+		</ul>
+		<div class="portfolio-warp">
+			<div class="row portfolio-gallery m-0">
+				<div class="mix col-lg-4 col-sm-6 p-0 nature">
+					<div class="portfolio-box">
+						<div class="portfolio-item set-bg" data-setbg="/static/images/portfolio/1.jpg"></div>
+						<h6>Shadow in the water</h6>
+						<p>2019</p>
+					</div>
+				</div>
+				<div class="mix col-lg-4 col-sm-6 p-0 studio">
+					<div class="portfolio-box">
+						<div class="portfolio-item set-bg" data-setbg="/static/images/portfolio/2.jpg"></div>
+						<h6>Winter in the Mountains</h6>
+						<p>2019</p>
+					</div>
+				</div>
+				<div class="mix col-lg-4 col-sm-6 p-0 weddings">
+					<div class="portfolio-box">
+						<div class="portfolio-item set-bg" data-setbg="/static/images/portfolio/3.jpg"></div>
+						<h6>Pink Flamingo</h6>
+						<p>2019</p>
+					</div>
+				</div>
+				<div class="mix col-lg-4 col-sm-6 p-0 lifestyle">
+					<div class="portfolio-box">
+						<div class="portfolio-item set-bg" data-setbg="/static/images/portfolio/4.jpg"></div>
+						<h6>Shadow in the water</h6>
+						<p>2019</p>
+					</div>
+				</div>
+				<div class="mix col-lg-4 col-sm-6 p-0 fashion">
+					<div class="portfolio-box">
+						<div class="portfolio-item set-bg" data-setbg="/static/images/portfolio/5.jpg"></div>
+						<h6>Winter in the Mountains</h6>
+						<p>2019</p>
+					</div>
+				</div>
+				<div class="mix col-lg-4 col-sm-6 p-0 nature">
+					<div class="portfolio-box">
+						<div class="portfolio-item set-bg" data-setbg="/static/images/portfolio/6.jpg"></div>
+						<h6>Pink Flamingo</h6>
+						<p>2019</p>
+					</div>
+				</div>
+				<div class="mix col-lg-4 col-sm-6 p-0 studio">
+					<div class="portfolio-box">
+						<div class="portfolio-item set-bg" data-setbg="/static/images/portfolio/7.jpg"></div>
+						<h6>Shadow in the water</h6>
+						<p>2019</p>
+					</div>
+				</div>
+				<div class="mix col-lg-4 col-sm-6 p-0 weddings">
+					<div class="portfolio-box">
+						<div class="portfolio-item set-bg" data-setbg="/static/images/portfolio/8.jpg"></div>
+						<h6>Winter in the Mountains</h6>
+						<p>2019</p>
+					</div>
+				</div>
+				<div class="mix col-lg-4 col-sm-6 p-0 lifestyle">
+					<div class="portfolio-box">
+						<div class="portfolio-item set-bg" data-setbg="/static/images/portfolio/9.jpg"></div>
+						<h6>Pink Flamingo</h6>
+						<p>2019</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text-center">
+			<button class="site-btn">Load More</button>
+		</div>
+	</div>
+	<!-- Portfolio section end  -->
+	{% endblock %}

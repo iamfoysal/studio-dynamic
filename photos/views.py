@@ -31,6 +31,13 @@ def viewPhoto(request, pk):
     return render(request, 'photos/photo.html', {'photo': photo})
 
 
+def portfolio(request):
+    return render(request, 'photos/portfolio.html')
+
+def portfolio_one(request):
+    return render(request, 'photos/portfolio.html')
+
+
 @login_required(login_url='signin')
 def addPhoto(request):
     categories= Category.objects.all()
