@@ -9,11 +9,13 @@
         <div class="hero-item portfolio-item set-bg" data-setbg="{{ photo.image.url }}">
             <a href="{% url 'photo' photo.id %}" class="hero-link">
                 <h2>{{ photo.title }}</h2>
-               
             </a>
         </div>
+        <a download href="{{photo.image.url}}"> download</a>
+
     {% endfor %}
     </div>
+   
     <div class="hero-social-links">
         <a href=""><i class="fa fa-pinterest"></i></a>
         <a href=""><i class="fa fa-facebook"></i></a>

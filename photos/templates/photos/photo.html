@@ -11,6 +11,9 @@
                     max-height: 100%; " src="{{photo.image.url}}" alt="">
 
                     <div class="container mb-5">
+                    <!-- download tag -->
+                         <a download href="{{photo.image.url}}"> download</a>
+
                         <p>title: {{ photo.title }} </p>
                         <small>Category : {{ photo.name }}</small>
                         <p class=" ">{{photo.description}}</p>
